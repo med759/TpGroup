@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.960
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PanierMVVM", "PanierMVVM\PanierMVVM.csproj", "{3A8C9867-E448-4FB6-B2A8-6776955097BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PanierMVVM", "PanierMVVM.csproj", "{3A8C9867-E448-4FB6-B2A8-6776955097BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {19DFCE37-10AF-4624-8F3A-3361954A6F8C}
+		SolutionGuid = {EBB7BF81-B5A9-4C75-BF84-CDB3FBBFBF81}
 	EndGlobalSection
 EndGlobal
