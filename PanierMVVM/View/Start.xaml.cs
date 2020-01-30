@@ -1,4 +1,5 @@
-﻿using PanierMVVM.ViewModel;
+﻿using PanierMVVM.Model.Classes;
+using PanierMVVM.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,9 @@ namespace PanierMVVM.View
     /// </summary>
     public partial class Start : Window
     {
+        private StartViewModel s;
+        private Produit p;
+
         public Start()
         {
             InitializeComponent();
@@ -28,7 +32,7 @@ namespace PanierMVVM.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            StartViewModel s = DataContext as StartViewModel;
+            s = DataContext as StartViewModel;
             s.Client.Save();
         }
 
@@ -36,6 +40,18 @@ namespace PanierMVVM.View
         {
             AjoutProduit a = new AjoutProduit(produitLab.Text);
             a.Show();
+        }
+
+        private void Recherche_Click(object sender, RoutedEventArgs e)
+        {
+            s = DataContext as StartViewModel;
+            p = s.Produit.Search();
+            productFound.Content = p.ToString();
+        }
+
+        private void AjoutPanier_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

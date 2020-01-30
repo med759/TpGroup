@@ -16,6 +16,8 @@ namespace PanierMVVM.Model.Classes
 
         public static SqlCommand command;
         public static SqlDataAdapter dataAdapter;
+        public static SqlDataReader reader;
+
 
         public int Id { get => id; set => id = value; }
         public string Label { get => label; set => label = value; }
@@ -50,6 +52,29 @@ namespace PanierMVVM.Model.Classes
             command.Dispose();
             Configuration.Connection.Close();
             return Id > 0;
+        }
+
+        public Produit Search()
+        {
+            Produit p = null;
+            string request = @"SELECT TOP 1 label, prix FROM produit where label = @label";
+            command = new SqlCommand(request, Configuration.Connection);
+            command.Parameters.Add(new SqlParameter("@label", Label));
+            Configuration.Connection.Open();
+            reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                p = new Produit() { Label = reader.GetString(0), Prix = reader.GetDecimal(1) };
+            }
+            command.Dispose();
+            Configuration.Connection.Close();
+
+            return p;
+        }
+
+        public override string ToString()
+        {
+            return $"Label : {label}, Prix {prix}";
         }
     }
 }
