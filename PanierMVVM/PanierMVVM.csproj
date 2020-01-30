@@ -70,6 +70,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\Classes\Client.cs" />
+    <Compile Include="Model\Classes\Configuration.cs" />
+    <Compile Include="Model\Classes\Produit.cs" />
     <Compile Include="ViewModel\AjoutProduitViewModel.cs" />
     <Compile Include="ViewModel\StartViewModel.cs" />
     <Compile Include="View\AjoutProduit.xaml.cs">
@@ -126,8 +129,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\Classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

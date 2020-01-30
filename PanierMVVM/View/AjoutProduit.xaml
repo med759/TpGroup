@@ -7,8 +7,10 @@
         mc:Ignorable="d"
         Title="AjoutProduit" Height="216.186" Width="285.792">
     <Grid>
-        <Label Content="Nom : " HorizontalAlignment="Left" Margin="24,26,0,0" VerticalAlignment="Top" Width="226"/>
-        <Label Content="Prix : " HorizontalAlignment="Left" Margin="24,79,0,0" VerticalAlignment="Top" Width="226"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="24,145,0,0" VerticalAlignment="Top" Width="226"/>
+        <Label Content="Label :" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="24,26,0,0" VerticalAlignment="Top" Width="42"/>
+        <Label Content="Prix :" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="24,79,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button Content="Ajouter le produit" HorizontalAlignment="Left" Margin="24,145,0,0" VerticalAlignment="Top" Width="226" Click="Button_Click"/>
+        <TextBox x:Name="label" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="26" Margin="71,26,0,0" TextWrapping="Wrap" Text="{Binding Label}" VerticalAlignment="Top" Width="179"/>
+        <TextBox x:Name="prix" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="26" Margin="71,79,0,0" TextWrapping="Wrap" Text="{Binding Prix}" VerticalAlignment="Top" Width="179"/>
     </Grid>
 </Window>

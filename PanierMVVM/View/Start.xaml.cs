@@ -25,5 +25,17 @@ namespace PanierMVVM.View
             InitializeComponent();
             DataContext = new StartViewModel();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            StartViewModel s = DataContext as StartViewModel;
+            s.Client.Save();
+        }
+
+        private void AjouterProduit_Click(object sender, RoutedEventArgs e)
+        {
+            AjoutProduit a = new AjoutProduit(produitLab.Text);
+            a.Show();
+        }
     }
 }
