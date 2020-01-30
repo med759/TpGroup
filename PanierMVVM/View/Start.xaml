@@ -15,18 +15,18 @@
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="325" Margin="322,0,0,-0.2" Stroke="Black" VerticalAlignment="Top" Width="304" Grid.RowSpan="2"/>
         <Label Content="Saisie information client : " HorizontalAlignment="Left" Margin="84,36,0,0" VerticalAlignment="Top" Width="177"/>
         <Label Content="Nom : " HorizontalAlignment="Left" Margin="84,19.8,0,0" VerticalAlignment="Top" RenderTransformOrigin="-10.167,-2.016" Grid.Row="1"/>
-        <TextBox x:Name="nom" HorizontalAlignment="Left" Height="23" Margin="134,19.8,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox x:Name="nom" HorizontalAlignment="Left" Height="23" Margin="134,19.8,0,0" TextWrapping="Wrap" Text="{Binding Nom}" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
         <Label Content="Prénom : " HorizontalAlignment="Left" Margin="68,79.8,0,0" VerticalAlignment="Top" Grid.Row="1" RenderTransformOrigin="0.818,0.552"/>
-        <TextBox x:Name="prenom" HorizontalAlignment="Left" Height="23" Margin="134,79.8,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox x:Name="prenom" HorizontalAlignment="Left" Height="23" Margin="134,79.8,0,0" TextWrapping="Wrap" Text="{Binding Prenom}" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
         <Label Content="Téléphone : " HorizontalAlignment="Left" Margin="55,133.8,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-        <TextBox x:Name="telephone" HorizontalAlignment="Left" Height="23" Margin="134,133.8,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox x:Name="telephone" HorizontalAlignment="Left" Height="23" Margin="134,133.8,0,0" TextWrapping="Wrap" Text="{Binding Telephone}" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
         <Label Content="Produit : " HorizontalAlignment="Left" Margin="333,18,0,0" VerticalAlignment="Top" Width="104"/>
         <Button Content="Rechercher" HorizontalAlignment="Left" Margin="398,44,0,0" VerticalAlignment="Top" Width="94" Height="23"/>
         <Label Content="Panier" HorizontalAlignment="Left" Height="31" Margin="333,56.8,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.481,1.568" Grid.Row="1"/>
-        <Button Content="Ajouter" HorizontalAlignment="Left" Margin="492,44,0,0" VerticalAlignment="Top" Width="101" Height="23"/>
-        <TextBox x:Name="produitSearch" HorizontalAlignment="Left" Height="23" Margin="398,16,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="195"/>
+        <Button Content="Ajouter" HorizontalAlignment="Left" Margin="492,44,0,0" VerticalAlignment="Top" Width="101" Height="23" Click="AjouterProduit_Click"/>
+        <TextBox x:Name="produitLab" HorizontalAlignment="Left" Height="23" Margin="398,16,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="195"/>
         <Label Content="" HorizontalAlignment="Left" Margin="333,12.8,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.041,0.18" Width="260"/>
-        <ListView x:Name="listePanier" HorizontalAlignment="Left" Height="100" Margin="333,92.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="260">
+        <ListView HorizontalAlignment="Left" Height="100" Margin="333,92.8,0,0" Grid.Row="1" VerticalAlignment="Top" Width="260">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Nom" Width="80"/>
@@ -35,6 +35,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Valider" HorizontalAlignment="Left" Margin="421,212.8,0,0" VerticalAlignment="Top" Width="94" Height="23" Grid.Row="1"/>
+        <Button Content="Valider" HorizontalAlignment="Left" Margin="421,212.8,0,0" VerticalAlignment="Top" Width="94" Height="23" Grid.Row="1" Click="Button_Click"/>
     </Grid>
 </Window>

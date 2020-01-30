@@ -25,5 +25,17 @@ namespace PanierMVVM.View
             InitializeComponent();
             DataContext = new AjoutProduitViewModel();
         }
+
+        public AjoutProduit(string labProduit) : this()
+        {
+            AjoutProduitViewModel a = DataContext as AjoutProduitViewModel;
+            a.Label = labProduit;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AjoutProduitViewModel a = DataContext as AjoutProduitViewModel;
+            a.Produit.Save();
+        }
     }
 }
